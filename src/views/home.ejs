@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/home.css" />
+		<link rel="stylesheet" href="assets/css/geral.css" />
+
+		<title>Home</title>
+	</head>
+	<body>
+		<h1 class="title">Bem-vindo ao Home</h1>
+
+		<div class="card">
+			<div class="user-info">
+				<% if(user) { %>
+				<h2>Suas Informações</h2>
+				<div class="id">Id: <span><%= user.id %></span></div>
+				<div class="name">Nome: <span><%= user.name %></span></div>
+				<div class="email">E-mail: <span><%= user.email %></span></div>
+				<% } else { %>
+				<h2>Não está logado?</h2>
+				<div class="buttons">
+					<a href="/login" class="button">Faça Login</a> Ou
+					<a href="/register" class="button">Faça o Cadastro</a>
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/geral.css" />
+		<link rel="stylesheet" href="assets/css/register-login.css" />
+		<title>Entre</title>
+	</head>
+	<body>
+		<h1 class="title">Entre na sua conta</h1>
+
+		<form action="http://localhost:3033/login" method="post" class="form">
+			<label for="email">Seu email:</label>
+			<input type="text" name="email" placeholder="example@provedor.com" />
+			<label for="password">Crie um password</label>
+			<input type="text" name="password" placeholder="******" />
+
+			<button type="submit" class="button-submit">Entrar</button>
+			<aside class="aside">
+				<p>
+					Não possui uma conta ainda? <a href="/register">Cadastra-se aqui</a>
+				</p>
+				<p>Voltar para a página inicial? <a href="/">Clique aqui</a></p>
+			</aside>
+		</form>
+	</body>
+</html>

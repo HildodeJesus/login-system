@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/geral.css" />
+		<link rel="stylesheet" href="assets/css/register-login.css" />
+
+		<title>Cadastra-se</title>
+	</head>
+	<body>
+		<h1 class="title">Registre-se</h1>
+
+		<form
+			action="http://localhost:3033/api/1.0/register"
+			method="post"
+			class="form"
+		>
+			<% if(error != '') { %>
+			<p class="error"><%= error %></p>
+			<% } %>
+			<label for="name">Seu Nome:</label>
+			<input type="text" name="name" placeholder="Seu Nome" />
+			<label for="email">Seu email:</label>
+			<input type="text" name="email" placeholder="example@provedor.com" />
+			<label for="password">Crie um password</label>
+			<input type="text" name="password" placeholder="******" />
+
+			<button type="submit" class="button-submit">Registrar</button>
+			<aside class="aside">
+				<p>Já possui uma conta? <a href="/login">Entre aqui</a></p>
+
+				<p>Voltar para a página inicial? <a href="/">Clique aqui</a></p>
+			</aside>
+		</form>
+	</body>
+</html>
