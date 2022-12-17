@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +11,10 @@
 	<body>
 		<h1 class="title">Entre na sua conta</h1>
 
-		<form action="http://localhost:3033/login" method="post" class="form">
+		<form action="http://localhost:5000/login" method="post" class="form">
+			<% if(error != '') { %>
+			<p class="error"><%= error %></p>
+			<% } %>
 			<label for="email">Seu email:</label>
 			<input type="text" name="email" placeholder="example@provedor.com" />
 			<label for="password">Crie um password</label>

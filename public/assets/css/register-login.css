@@ -2,6 +2,14 @@
 	text-align: center;
 }
 
+.error {
+	background-color: rgba(255, 0, 0, 0.253);
+	border-left: 5px red solid;
+	border-radius: 15px;
+	padding: 20px 0 20px 10px;
+	margin-bottom: 30px;
+}
+
 .form {
 	margin: 30px auto 0 auto;
 	background-color: white;
@@ -10,7 +18,6 @@
 
 	padding: 30px 30px;
 	width: 500px;
-
 	flex-direction: column;
 	display: flex;
 }

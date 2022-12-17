@@ -4,14 +4,11 @@ import UserModel from "../models/UserModel";
 
 export class AccountController {
 	async loginPage(req: Request, res: Response) {
-		let error = req.flash("error");
-
-		res.render("login", { error });
+		res.render("login", { error: req.flash("loginErr") });
 	}
 
 	async registerPage(req: Request, res: Response) {
-		const error = req.flash("error");
-		res.render("cadastro", { error });
+		res.render("cadastro", { error: req.flash("registerErr") });
 	}
 
 	async login(req: Request, res: Response) {
@@ -35,7 +32,7 @@ export class AccountController {
 
 			res.redirect("/");
 		} catch (err) {
-			req.flash("error", err);
+			req.flash("loginErr", err);
 			res.redirect("/login");
 		}
 	}
@@ -63,8 +60,7 @@ export class AccountController {
 
 			res.redirect("/login");
 		} catch (err) {
-			req.flash("error", err);
-
+			req.flash("registerErr", err);
 			res.redirect("/register");
 		}
 	}

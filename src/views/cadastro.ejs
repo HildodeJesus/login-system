@@ -12,11 +12,7 @@
 	<body>
 		<h1 class="title">Registre-se</h1>
 
-		<form
-			action="http://localhost:3033/api/1.0/register"
-			method="post"
-			class="form"
-		>
+		<form action="http://localhost:5000/register" method="post" class="form">
 			<% if(error != '') { %>
 			<p class="error"><%= error %></p>
 			<% } %>
